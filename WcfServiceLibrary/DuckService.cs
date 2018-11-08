@@ -8,6 +8,7 @@ using System.Text;
 namespace WcfServiceLibrary
 {
     // ПРИМЕЧАНИЕ. Команду "Переименовать" в меню "Рефакторинг" можно использовать для одновременного изменения имени класса "Service1" в коде и файле конфигурации.
+    [ServiceBehavior(AddressFilterMode = AddressFilterMode.Any)]
     public class DuckService : IDuckService
     {      
 
@@ -30,7 +31,7 @@ namespace WcfServiceLibrary
                 return null;
             else
             {
-                composite.SizeDick -= 5;
+                composite.SizeDuck -= 5;
             }
             return composite;
         }

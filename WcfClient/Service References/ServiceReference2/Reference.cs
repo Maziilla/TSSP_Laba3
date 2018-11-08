@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WcfClient.ServiceReference {
+namespace WcfClient.ServiceReference2 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.IDuckService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference2.IDuckService")]
     public interface IDuckService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDuckService/GetDuck", ReplyAction="http://tempuri.org/IDuckService/GetDuckResponse")]
@@ -29,12 +29,12 @@ namespace WcfClient.ServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IDuckServiceChannel : WcfClient.ServiceReference.IDuckService, System.ServiceModel.IClientChannel {
+    public interface IDuckServiceChannel : WcfClient.ServiceReference2.IDuckService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class DuckServiceClient : System.ServiceModel.ClientBase<WcfClient.ServiceReference.IDuckService>, WcfClient.ServiceReference.IDuckService {
+    public partial class DuckServiceClient : System.ServiceModel.ClientBase<WcfClient.ServiceReference2.IDuckService>, WcfClient.ServiceReference2.IDuckService {
         
         public DuckServiceClient() {
         }

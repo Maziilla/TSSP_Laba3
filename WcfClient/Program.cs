@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WcfClient.ServiceReference;
+using WcfClient.ServiceReference2;
 
 namespace WcfClient
 {
@@ -42,12 +42,14 @@ namespace WcfClient
             else
             {
                 // mitmweb --web-port 28000 --listen-port 18000 --mode reverse:http://localhost:13044
+
+                Console.WriteLine($"http://localhost:{proxyPort.Value}/basic");
                 var kk =new DuckServiceClient("BasicHttpBinding_IDuckService",
-                    $"http://localhost:{proxyPort.Value}/our/service/basic").GetDuck(null);
+                    $"http://localhost:{proxyPort.Value}/basic").GetDuck(null);
                 kk = new DuckServiceClient("BasicHttpBinding_IDuckService",
-                    $"http://localhost:{proxyPort.Value}/our/service/basic").GetDuck(kk);
+                    $"http://localhost:{proxyPort.Value}/basic").GetDuck(kk);
                 kk = new DuckServiceClient("BasicHttpBinding_IDuckService",
-                    $"http://localhost:{proxyPort.Value}/our/service/basic").Separate(kk);
+                    $"http://localhost:{proxyPort.Value}/basic").Separate(kk);
                 Console.WriteLine("Querying through proxy has been completed");
             }
 

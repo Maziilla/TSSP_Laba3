@@ -26,7 +26,7 @@ namespace WcfServiceLibrary
     {
         bool isGay = true;
         string name = "Pidor";
-        int sizeDick = 15;
+        int sizeDuck = 15;
 
         [DataMember]
         public bool IsGay
@@ -43,10 +43,10 @@ namespace WcfServiceLibrary
         }
 
         [DataMember]
-        public int SizeDick
+        public int SizeDuck
         {
-            get { return sizeDick; }
-            set { sizeDick = value; }
+            get { return sizeDuck; }
+            set { sizeDuck = value; }
         }
     }
 }
